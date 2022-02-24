@@ -1,0 +1,112 @@
+\documentclass[a4paper]{report}
+\usepackage{blindtext}  
+\usepackage{geometry}
+
+% Page margin layout
+\geometry{left=2.3cm,right=2cm,top=2.5cm,bottom=2.0cm}
+
+\usepackage[UTF8, scheme = plain]{ctex}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{float}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{epsfig}
+\usepackage{float}
+
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{longtable}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{listings}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+\usepackage{color,xcolor}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{listings}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{2em} % Make two letter space in the first paragraph
+\usepackage{setspace}
+\linespread{1.5} % Line spacing setting
+\usepackage{siunitx}
+\setlength{\parskip}{0.5em} % Paragraph spacing setting
+
+\graphicspath{ {images/} }
+
+%%%%%%%%%%%%%
+\newcommand{\StudentNumber}{112233445566}  % Fill your student number here
+\newcommand{\StudentName}{Johnson}  % Replace your name here
+\newcommand{\PaperTitle}{How to Barbecue}  % Change your paper title here
+\newcommand{\PaperType}{Programming Report} % Replace the type of your report here
+\newcommand{\Date}{December 4, 2001}
+%%%%%%%%%%%%%
+
+%% Page header and footer setting
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\texttt{\PaperTitle }}
+\fancyhead[R]{\texttt{Page {\thepage} of \pageref{LastPage}}}
+
+
+
+\title{\PaperTitle}
+\author{\StudentName \; \StudentNumber}
+\date{}
+
+\begin{document}
+	
+\vspace*{1cm}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=4.0cm]{logo.png}
+\end{figure}
+
+\vspace*{1cm}
+
+\begin{center}
+	\Huge{\textbf{\PaperType}}
+	
+	\Large{\PaperTitle}
+\end{center}
+
+\vspace*{1cm}
+
+\begin{table}[h]
+	\centering	
+	\begin{Large}
+		\begin{tabular}{p{7cm}<{\centering}}
+			\StudentName  \\
+			\hline
+			\StudentNumber \\
+			\hline
+			\Date  \\
+			\hline
+		\end{tabular}
+	\end{Large}
+\end{table}
+
+\newpage
+	
+\tableofcontents 
+\newpage
+
+
+\end{document}
