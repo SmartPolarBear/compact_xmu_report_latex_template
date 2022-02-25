@@ -71,154 +71,163 @@
 
 \title{\PaperTitle}
 \author{\StudentName}
+\date{\Date}
 
 \begin{document}
 	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter % change default title style
-\renewcommand*\maketitle{%
-	\begin{center} 
-		\bfseries  % title 
-		{\LARGE \@title \par}  % LARGE typesetting
-		\vskip 1em  %  margin 1em
-		{\global\let\author\@empty}  % no author information
-		{\global\let\date\@empty}  % no date
-		\thispagestyle{empty}   %  empty page style
-	\end{center}%
-	\setcounter{footnote}{0}%
-}
-\makeatother
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\makeatletter % change default title style
+	\renewcommand*\maketitle{%
+		\begin{center} 
+			\bfseries  % title 
+			{\LARGE \@title \par}  % LARGE typesetting
+			\vskip 1em  %  margin 1em
+			{\global\let\author\@empty}  % no author information
+			{\global\let\date\@empty}  % no date
+			\thispagestyle{empty}   %  empty page style
+		\end{center}%
+		\setcounter{footnote}{0}%
+	}
+	\makeatother
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	
-\thispagestyle{empty}
-
-\vspace*{1cm}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=4.0cm]{logo.png}
-\end{figure}
-
-\vspace*{1cm}
-
-\begin{center}
-	\Huge{\textbf{\PaperType}}
+	\thispagestyle{empty}
 	
-	\Large{\PaperTitle}
-\end{center}
-
-\vspace*{1cm}
-
-\begin{table}[h]
-	\centering	
-	\begin{Large}
-		\begin{tabular}{p{7cm}<{\centering}}
-			\StudentName  \\
-			\hline
-			\StudentNumber \\
-			\hline
-			\Date  \\
-			\hline
-		\end{tabular}
-	\end{Large}
-\end{table}
-
-
-
-\newpage
-
-\title{
-	\Large{\textcolor{black}{\PaperTitle}}
-}
+	\vspace*{1cm}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=4.0cm]{logo.png}
+	\end{figure}
+	
+	\vspace*{1cm}
+	
+	\begin{center}
+		\Huge{\textbf{\PaperType}}
+		
+		\Large{\PaperTitle}
+	\end{center}
+	
+	\vspace*{1cm}
+	
+	\begin{table}[h]
+		\centering	
+		\begin{Large}
+			\renewcommand{\arraystretch}{1.5}
+			\begin{tabular}{p{7cm}<{\centering}}
+				\StudentName  \\
+				\hline
+				\StudentNumber \\
+				\hline
+				\Date  \\
+				\hline
+			\end{tabular}
+		\end{Large}
+	\end{table}
 	
 	
-\maketitle
 	
-\tableofcontents
- 
-\newpage
-\thispagestyle{empty}
-
-\begin{abstract}
-Lorem ipsum dolor sit amet, quando quidam possit qui id, his corpora perfecto atomorum no. Ad eum dolores conclusionemque, ei duo platonem qualisque incorrupte. An mel debet copiosae vituperata, te everti imperdiet mea, sale eripuit cu nam. Ea eum velit tincidunt cotidieque, eum ne enim lorem viris. Sed an feugait interpretaris, sed ad illud ceteros. 
-
-\par\textbf{Key word：} sed, ceteros. 
-
-\end{abstract}
-
-\newpage
-\setcounter{page}{1}
-%%%%%%%%%%%%%%%%%
-
-\section{Prepare Foods}
-
-\section{Set A Fire}
-
-\subsection{Use Lighter}
-\subsection{Use Match}
-
-Lorem ipsum dolor sit amet, quando quidam possit qui id, his corpora perfecto atomorum no. Ad eum dolores conclusionemque, ei duo platonem qualisque incorrupte. An mel debet copiosae vituperata, te everti imperdiet mea, sale eripuit cu nam. Ea eum velit tincidunt cotidieque, eum ne enim lorem viris. Sed an feugait interpretaris, sed ad illud ceteros.
-
-Usu eius mediocrem conceptam ei. An mea esse virtute aliquam. Quando definiebas nam in, in sumo ferri appetere ius. Ei sed erant eruditi fuisset. Iuvaret instructior te sed, eum elit soluta et. Per cu omnis solet decore, ut solet nostro vis, an sed amet dolorem torquatos.
-
-Eos ut eirmod utroque ocurreret, cu dolorum consequat nec. Dicant placerat has ei, et laoreet epicuri consequuntur sed, eu mea sint solum nulla. Sea sumo nibh tation an, nusquam definitiones te per. Ea justo choro vel. Eos suscipit verterem inimicus et, minim contentiones cu mel.
-
-\newpage
-
-At mei aliquando similique, vis iriure mandamus salutandi no, no duo tritani recteque. Numquam torquatos pri ne. His tale dicat mazim an. Vim cu veritus legendos. No qui iisque intellegam dissentias, has error consulatu complectitur in. Eos ei tantas aperiri sensibus, nemore feugiat et per.
-
-\newpage
-
-Modo lorem audire ne qui, id tale ceteros deseruisse sed, duis legimus inciderint sea ut. Ponderum dissentiet pro an, ut adhuc iisque delectus est. Ne quis choro dolorum est, ea eirmod eripuit atomorum pri. Quo ea molestie principes, nobis laudem theophrastus te sea. Ne errem tractatos vis, est eros fierent percipit et.
-
-%%%%%%%%%%%%%%%%%
-\newpage
-\begin{thebibliography}{00}
+	\newpage
 	
-	%% \bibitem{label}
-	%% Text of bibliographic item
+	\title{
+		\Large{\textcolor{black}{\PaperTitle}}
+	}
 	
-	\bibitem{Pawar2012}
-	P.~Y.~Pawar and S.~H.~Gawande, ``A Comparative Study on Different Types of Approaches to Text Categorization,'' \textit{International Journal of Machine Learning and Computing}, vol. 2, no. 4, pp. 423-426, 2012.
 	
-	\bibitem{Pang2005}
-	B.~Pang and L.~Lee, ``Seeing stars: Exploiting class relationships for sentiment categorization with respect to rating scales,'' \textit{Proceedings of the 43rd Meeting of the Association for Computational Linguistics}, pp. 115–124, 2005.
+	\maketitle
 	
-	\bibitem{McAuley2013}
-	J.~McAuley, J.~Leskovec, ``Hidden factors and hidden topics: understanding rating dimensions with review text'', \textit{Proceedings of the 7th ACM Conference on Recommender Systems (RecSys 2013)}, pp. 165-172, October 2013.
+	\tableofcontents
 	
-	\bibitem{Hu2009}
-	N.~Hu, P.~Pavlou, and J.~Zhang, ``Overcoming the J-shaped distribution of products reviews,'' \textit{Communications of the ACM}, vol. 52, pp. 144-147, 2009. 
+	\newpage
+	\thispagestyle{empty}
 	
-	\bibitem{Koren2009}
-	Y.~Koren, R.~Bell, and C.~Volinsky, ``Matrix factorization techniques for recommender systems,'' \textit{Computer}, vol. 42, no. 8, pp. 30-37, 2009.
+	\begin{spacing}{1.2} 
 	
-	\bibitem{Hu2008}
-	Y.~F.~Hu, Y.~Koren, C.~Volinsky, ``Collaborative filtering for implicit feedback datasets,'' \textit{Proceedings of IEEE International Conference on Data Mining (ICDM 2008)}, pp. 263-272, 2008.
-	
-	\bibitem{Frees2009}
-	E.~W.~Frees, \textit{Regression Modeling with Actuarial and Financial Applications}, Cambridge, UK: Cambridge University Press, 2009. ISBN: 978-0521135962
-	
-\end{thebibliography}
-\addcontentsline{toc}{section}{References}
+	\begin{abstract}
+		Lorem ipsum dolor sit amet, quando quidam possit qui id, his corpora perfecto atomorum no. Ad eum dolores conclusionemque, ei duo platonem qualisque incorrupte. An mel debet copiosae vituperata, te everti imperdiet mea, sale eripuit cu nam. Ea eum velit tincidunt cotidieque, eum ne enim lorem viris. Sed an feugait interpretaris, sed ad illud ceteros. 
+		
+		\par\textbf{Key word：} sed, ceteros. 
+		
+	\end{abstract}
 
-
-\addtocounter{page}{-1}
-\thispagestyle{empty}
-
-%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%
-\newpage
-%% The Appendices part is started with the command \appendix;
-%% appendix sections are then done as normal sections
-\appendix
-\section*{Appendix: Something}
-Modo lorem audire ne qui, id tale ceteros deseruisse sed, duis legimus inciderint sea ut. Ponderum dissentiet pro an, ut adhuc iisque delectus est. Ne quis choro dolorum est, ea eirmod eripuit atomorum pri. Quo ea molestie principes, nobis laudem theophrastus te sea. Ne errem tractatos vis, est eros fierent percipit et.
-
-\addtocounter{page}{-1}
-\thispagestyle{empty}
-
-%%%%%%%%%%%%%%%%%
+	\end{spacing} 
+	
+	\newpage
+	\setcounter{page}{1}
+	\begin{spacing}{1.2} 
+	%%%%%%%%%%%%%%%%%
+	
+	
+	\section{Prepare Foods}
+	
+	\section{Set A Fire}
+	
+	\subsection{Use Lighter}
+	\subsection{Use Match}
+	
+	Lorem ipsum dolor sit amet, quando quidam possit qui id, his corpora perfecto atomorum no. Ad eum dolores conclusionemque, ei duo platonem qualisque incorrupte. An mel debet copiosae vituperata, te everti imperdiet mea, sale eripuit cu nam. Ea eum velit tincidunt cotidieque, eum ne enim lorem viris. Sed an feugait interpretaris, sed ad illud ceteros.
+	
+	Usu eius mediocrem conceptam ei. An mea esse virtute aliquam. Quando definiebas nam in, in sumo ferri appetere ius. Ei sed erant eruditi fuisset. Iuvaret instructior te sed, eum elit soluta et. Per cu omnis solet decore, ut solet nostro vis, an sed amet dolorem torquatos.
+	
+	Eos ut eirmod utroque ocurreret, cu dolorum consequat nec. Dicant placerat has ei, et laoreet epicuri consequuntur sed, eu mea sint solum nulla. Sea sumo nibh tation an, nusquam definitiones te per. Ea justo choro vel. Eos suscipit verterem inimicus et, minim contentiones cu mel.
+	
+	\newpage
+	
+	At mei aliquando similique, vis iriure mandamus salutandi no, no duo tritani recteque. Numquam torquatos pri ne. His tale dicat mazim an. Vim cu veritus legendos. No qui iisque intellegam dissentias, has error consulatu complectitur in. Eos ei tantas aperiri sensibus, nemore feugiat et per.
+	
+	\newpage
+	
+	Modo lorem audire ne qui, id tale ceteros deseruisse sed, duis legimus inciderint sea ut. Ponderum dissentiet pro an, ut adhuc iisque delectus est. Ne quis choro dolorum est, ea eirmod eripuit atomorum pri. Quo ea molestie principes, nobis laudem theophrastus te sea. Ne errem tractatos vis, est eros fierent percipit et.
+	
+	%%%%%%%%%%%%%%%%%
+	\newpage
+	\begin{thebibliography}{00}
+		
+		%% \bibitem{label}
+		%% Text of bibliographic item
+		
+		\bibitem{Pawar2012}
+		P.~Y.~Pawar and S.~H.~Gawande, ``A Comparative Study on Different Types of Approaches to Text Categorization,'' \textit{International Journal of Machine Learning and Computing}, vol. 2, no. 4, pp. 423-426, 2012.
+		
+		\bibitem{Pang2005}
+		B.~Pang and L.~Lee, ``Seeing stars: Exploiting class relationships for sentiment categorization with respect to rating scales,'' \textit{Proceedings of the 43rd Meeting of the Association for Computational Linguistics}, pp. 115–124, 2005.
+		
+		\bibitem{McAuley2013}
+		J.~McAuley, J.~Leskovec, ``Hidden factors and hidden topics: understanding rating dimensions with review text'', \textit{Proceedings of the 7th ACM Conference on Recommender Systems (RecSys 2013)}, pp. 165-172, October 2013.
+		
+		\bibitem{Hu2009}
+		N.~Hu, P.~Pavlou, and J.~Zhang, ``Overcoming the J-shaped distribution of products reviews,'' \textit{Communications of the ACM}, vol. 52, pp. 144-147, 2009. 
+		
+		\bibitem{Koren2009}
+		Y.~Koren, R.~Bell, and C.~Volinsky, ``Matrix factorization techniques for recommender systems,'' \textit{Computer}, vol. 42, no. 8, pp. 30-37, 2009.
+		
+		\bibitem{Hu2008}
+		Y.~F.~Hu, Y.~Koren, C.~Volinsky, ``Collaborative filtering for implicit feedback datasets,'' \textit{Proceedings of IEEE International Conference on Data Mining (ICDM 2008)}, pp. 263-272, 2008.
+		
+		\bibitem{Frees2009}
+		E.~W.~Frees, \textit{Regression Modeling with Actuarial and Financial Applications}, Cambridge, UK: Cambridge University Press, 2009. ISBN: 978-0521135962
+		
+	\end{thebibliography}
+	\addcontentsline{toc}{section}{References}
+	
+	
+	\addtocounter{page}{-1}
+	\thispagestyle{empty}
+	
+	%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%
+	\newpage
+	%% The Appendices part is started with the command \appendix;
+	%% appendix sections are then done as normal sections
+	\appendix
+	\section*{Appendix: Something}
+	Modo lorem audire ne qui, id tale ceteros deseruisse sed, duis legimus inciderint sea ut. Ponderum dissentiet pro an, ut adhuc iisque delectus est. Ne quis choro dolorum est, ea eirmod eripuit atomorum pri. Quo ea molestie principes, nobis laudem theophrastus te sea. Ne errem tractatos vis, est eros fierent percipit et.
+	
+	\addtocounter{page}{-1}
+	\thispagestyle{empty}
+	
+	%%%%%%%%%%%%%%%%%
+	\end{spacing}
 \end{document}

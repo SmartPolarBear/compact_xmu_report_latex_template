@@ -2,10 +2,12 @@
 \usepackage{blindtext}  
 \usepackage{geometry}
 
+% Chinese support
+\usepackage[UTF8, scheme = plain]{ctex}
+
 % Page margin layout
 \geometry{left=2.3cm,right=2cm,top=2.5cm,bottom=2.0cm}
 
-\usepackage[UTF8, scheme = plain]{ctex}
 
 \usepackage{listings}
 \usepackage{xcolor}
@@ -47,14 +49,21 @@
 \usepackage{siunitx}
 \setlength{\parskip}{0.5em} % Paragraph spacing setting
 
+\renewcommand{\figurename}{图}
+\renewcommand{\lstlistingname}{代码} 
+\renewcommand{\tablename}{表格}
+\renewcommand{\contentsname}{目录}
+
 \graphicspath{ {images/} }
 
 %%%%%%%%%%%%%
 \newcommand{\StudentNumber}{112233445566}  % Fill your student number here
-\newcommand{\StudentName}{Johnson}  % Replace your name here
-\newcommand{\PaperTitle}{How to Barbecue}  % Change your paper title here
-\newcommand{\PaperType}{Programming Report} % Replace the type of your report here
-\newcommand{\Date}{December 4, 2001}
+\newcommand{\StudentName}{张三}  % Replace your name here
+\newcommand{\PaperTitle}{如何烧烤}  % Change your paper title here
+\newcommand{\PaperType}{课程报告} % Replace the type of your report here
+\newcommand{\Date}{2001年12月4日}
+\newcommand{\College}{信息学院}
+\newcommand{\CourseName}{吃饭躺平睡觉}
 %%%%%%%%%%%%%
 
 %% Page header and footer setting
@@ -66,11 +75,12 @@
 \fancyhead[LO]{\texttt{\StudentName }}
 \fancyhead[LE]{\texttt{\StudentNumber}}
 \fancyhead[C]{\texttt{\PaperTitle }}
-\fancyhead[R]{\texttt{Page {\thepage} of \pageref*{LastPage}}}
+\fancyhead[R]{\texttt{第{\thepage}页，共\pageref*{LastPage}页}}
 
 
 \title{\PaperTitle}
 \author{\StudentName}
+\date{\Date}
 
 \begin{document}
 	
@@ -113,18 +123,21 @@
 \begin{table}[h]
 	\centering	
 	\begin{Large}
-		\begin{tabular}{p{7cm}<{\centering}}
-			\StudentName  \\
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{p{3cm} p{5cm}<{\centering}}
+			姓\qquad 名 & \StudentName  \\
 			\hline
-			\StudentNumber \\
+			学\qquad号 & \StudentNumber \\
 			\hline
-			\Date  \\
+			日\qquad期 & \Date  \\
+			\hline
+			学\qquad院 & \College  \\
+			\hline
+			课程名称 & \CourseName  \\
 			\hline
 		\end{tabular}
 	\end{Large}
 \end{table}
-
-
 
 \newpage
 
@@ -140,37 +153,40 @@
 \newpage
 \thispagestyle{empty}
 
-\begin{abstract}
-Lorem ipsum dolor sit amet, quando quidam possit qui id, his corpora perfecto atomorum no. Ad eum dolores conclusionemque, ei duo platonem qualisque incorrupte. An mel debet copiosae vituperata, te everti imperdiet mea, sale eripuit cu nam. Ea eum velit tincidunt cotidieque, eum ne enim lorem viris. Sed an feugait interpretaris, sed ad illud ceteros. 
+\begin{spacing}{1.2} 
 
-\par\textbf{Key word：} sed, ceteros. 
+\begin{abstract}
+Lorem ipsum是指一篇用于网页设计、排印、布局和印刷的伪拉丁文章，其用于代替英语去强调设计元素而不是内容。它也被称为占位符文（或填充文）。它是一个很便利的模板工具。它用于帮助编排文章或演示文稿的视觉元素，如排印，字体，或布局。Lorem ipsum 大多是由古典作家和哲学家西塞罗创作的拉丁文的一部分。它的单词和字母由于添加或去移除而被改变了，所以故意使其内容荒谬；它不是真实的，正确的，再也不是可理解的拉丁语。虽然lorem ipsum看起来仍像古典拉丁语，但实际上它没有任何意义。因为西塞罗的文本不包含K，W，Z 这几个有异于拉丁文的字母，所以这几个字母和其他一些字母常常被随机插入去模拟欧洲语言的排印样式，这些字在原文中其实并没有。
+
+在专业化的使用语境中，经常发生的是私人或公司客户需要制作出版物，而实际的内容还没有准备好。试想如果在一篇新闻博客中填充进一整天每小时的新闻内容，出版复核人员往往会分心阅读其中可读的内容，例如从报纸或互联网上复制来的一段随机文本。他们会专注到文本内容，不再去关注布局及其元素。此外，随机文字内容可能无意中比较幽默或是有冒犯到别人，这在企业环境中将是不可接受的风险。Lorem ipsum和它的许多变体自从1960年代早期就被使用，而且很有可能是从十六世纪就已使用。
+
+\par\textbf{关键字：} sed, ceteros. 
 
 \end{abstract}
 
+\end{spacing}
+
 \newpage
 \setcounter{page}{1}
+\begin{spacing}{1.2} 
 %%%%%%%%%%%%%%%%%
 
-\section{Prepare Foods}
+\section{准备食物}
 
-\section{Set A Fire}
+\section{生火}
 
-\subsection{Use Lighter}
-\subsection{Use Match}
+\subsection{使用打火机}
+\subsection{使用火柴}
 
-Lorem ipsum dolor sit amet, quando quidam possit qui id, his corpora perfecto atomorum no. Ad eum dolores conclusionemque, ei duo platonem qualisque incorrupte. An mel debet copiosae vituperata, te everti imperdiet mea, sale eripuit cu nam. Ea eum velit tincidunt cotidieque, eum ne enim lorem viris. Sed an feugait interpretaris, sed ad illud ceteros.
+Lorem ipsum是指一篇用于网页设计、排印、布局和印刷的伪拉丁文章，其用于代替英语去强调设计元素而不是内容。它也被称为占位符文（或填充文）。它是一个很便利的模板工具。它用于帮助编排文章或演示文稿的视觉元素，如排印，字体，或布局。Lorem ipsum 大多是由古典作家和哲学家西塞罗创作的拉丁文的一部分。它的单词和字母由于添加或去移除而被改变了，所以故意使其内容荒谬；它不是真实的，正确的，再也不是可理解的拉丁语。虽然lorem ipsum看起来仍像古典拉丁语，但实际上它没有任何意义。因为西塞罗的文本不包含K，W，Z 这几个有异于拉丁文的字母，所以这几个字母和其他一些字母常常被随机插入去模拟欧洲语言的排印样式，这些字在原文中其实并没有。
 
-Usu eius mediocrem conceptam ei. An mea esse virtute aliquam. Quando definiebas nam in, in sumo ferri appetere ius. Ei sed erant eruditi fuisset. Iuvaret instructior te sed, eum elit soluta et. Per cu omnis solet decore, ut solet nostro vis, an sed amet dolorem torquatos.
-
-Eos ut eirmod utroque ocurreret, cu dolorum consequat nec. Dicant placerat has ei, et laoreet epicuri consequuntur sed, eu mea sint solum nulla. Sea sumo nibh tation an, nusquam definitiones te per. Ea justo choro vel. Eos suscipit verterem inimicus et, minim contentiones cu mel.
+在专业化的使用语境中，经常发生的是私人或公司客户需要制作出版物，而实际的内容还没有准备好。试想如果在一篇新闻博客中填充进一整天每小时的新闻内容，出版复核人员往往会分心阅读其中可读的内容，例如从报纸或互联网上复制来的一段随机文本。他们会专注到文本内容，不再去关注布局及其元素。此外，随机文字内容可能无意中比较幽默或是有冒犯到别人，这在企业环境中将是不可接受的风险。Lorem ipsum和它的许多变体自从1960年代早期就被使用，而且很有可能是从十六世纪就已使用。
 
 \newpage
 
-At mei aliquando similique, vis iriure mandamus salutandi no, no duo tritani recteque. Numquam torquatos pri ne. His tale dicat mazim an. Vim cu veritus legendos. No qui iisque intellegam dissentias, has error consulatu complectitur in. Eos ei tantas aperiri sensibus, nemore feugiat et per.
+Lorem ipsum是指一篇用于网页设计、排印、布局和印刷的伪拉丁文章，其用于代替英语去强调设计元素而不是内容。它也被称为占位符文（或填充文）。它是一个很便利的模板工具。它用于帮助编排文章或演示文稿的视觉元素，如排印，字体，或布局。Lorem ipsum 大多是由古典作家和哲学家西塞罗创作的拉丁文的一部分。它的单词和字母由于添加或去移除而被改变了，所以故意使其内容荒谬；它不是真实的，正确的，再也不是可理解的拉丁语。虽然lorem ipsum看起来仍像古典拉丁语，但实际上它没有任何意义。因为西塞罗的文本不包含K，W，Z 这几个有异于拉丁文的字母，所以这几个字母和其他一些字母常常被随机插入去模拟欧洲语言的排印样式，这些字在原文中其实并没有。
 
-\newpage
-
-Modo lorem audire ne qui, id tale ceteros deseruisse sed, duis legimus inciderint sea ut. Ponderum dissentiet pro an, ut adhuc iisque delectus est. Ne quis choro dolorum est, ea eirmod eripuit atomorum pri. Quo ea molestie principes, nobis laudem theophrastus te sea. Ne errem tractatos vis, est eros fierent percipit et.
+在专业化的使用语境中，经常发生的是私人或公司客户需要制作出版物，而实际的内容还没有准备好。试想如果在一篇新闻博客中填充进一整天每小时的新闻内容，出版复核人员往往会分心阅读其中可读的内容，例如从报纸或互联网上复制来的一段随机文本。他们会专注到文本内容，不再去关注布局及其元素。此外，随机文字内容可能无意中比较幽默或是有冒犯到别人，这在企业环境中将是不可接受的风险。Lorem ipsum和它的许多变体自从1960年代早期就被使用，而且很有可能是从十六世纪就已使用。
 
 %%%%%%%%%%%%%%%%%
 \newpage
@@ -201,7 +217,7 @@ Modo lorem audire ne qui, id tale ceteros deseruisse sed, duis legimus inciderin
 	E.~W.~Frees, \textit{Regression Modeling with Actuarial and Financial Applications}, Cambridge, UK: Cambridge University Press, 2009. ISBN: 978-0521135962
 	
 \end{thebibliography}
-\addcontentsline{toc}{section}{References}
+\addcontentsline{toc}{section}{引用}
 
 
 \addtocounter{page}{-1}
@@ -214,11 +230,13 @@ Modo lorem audire ne qui, id tale ceteros deseruisse sed, duis legimus inciderin
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
 \appendix
-\section*{Appendix: Something}
-Modo lorem audire ne qui, id tale ceteros deseruisse sed, duis legimus inciderint sea ut. Ponderum dissentiet pro an, ut adhuc iisque delectus est. Ne quis choro dolorum est, ea eirmod eripuit atomorum pri. Quo ea molestie principes, nobis laudem theophrastus te sea. Ne errem tractatos vis, est eros fierent percipit et.
+\section*{附录：附录}
+Lorem ipsum是指一篇用于网页设计、排印、布局和印刷的伪拉丁文章，其用于代替英语去强调设计元素而不是内容。它也被称为占位符文（或填充文）。它是一个很便利的模板工具。它用于帮助编排文章或演示文稿的视觉元素，如排印，字体，或布局。Lorem ipsum 大多是由古典作家和哲学家西塞罗创作的拉丁文的一部分。它的单词和字母由于添加或去移除而被改变了，所以故意使其内容荒谬；它不是真实的，正确的，再也不是可理解的拉丁语。虽然lorem ipsum看起来仍像古典拉丁语，但实际上它没有任何意义。因为西塞罗的文本不包含K，W，Z 这几个有异于拉丁文的字母，所以这几个字母和其他一些字母常常被随机插入去模拟欧洲语言的排印样式，这些字在原文中其实并没有。
 
+在专业化的使用语境中，经常发生的是私人或公司客户需要制作出版物，而实际的内容还没有准备好。试想如果在一篇新闻博客中填充进一整天每小时的新闻内容，出版复核人员往往会分心阅读其中可读的内容，例如从报纸或互联网上复制来的一段随机文本。他们会专注到文本内容，不再去关注布局及其元素。此外，随机文字内容可能无意中比较幽默或是有冒犯到别人，这在企业环境中将是不可接受的风险。Lorem ipsum和它的许多变体自从1960年代早期就被使用，而且很有可能是从十六世纪就已使用。
 \addtocounter{page}{-1}
 \thispagestyle{empty}
 
 %%%%%%%%%%%%%%%%%
+\end{spacing}
 \end{document}
